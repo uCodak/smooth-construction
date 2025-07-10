@@ -23,7 +23,7 @@
           <img src="images/smoothsail logo.webp" alt="" class="w-[200px]" />
           <nav class="hidden md:block">
             <ul class="text-white flex gap-[40px]">
-              <li class="hover:text-[#003365]"><a href="">About Us</a></li>
+              <li class="hover:text-[#003365]"><a href="./About.html">About Us</a></li>
               <li class="hover:text-[#003366]"><a href="">Services</a></li>
               <li class="hover:text-[#003366]"><a href="">Contact Us</a></li>
             </ul>
@@ -675,6 +675,7 @@
       </div>
     </div>
   </section>
+  <!--footer-->
   <section class="bg-[#DFEFFF] p-4 md:p-[100px]">
     <div class="flex flex-col md:flex-row gap-[40px] mb-[40px]">
       <div class="w-full md:w-1/2">
@@ -755,14 +756,28 @@
         <label for="email" class="text-2xl font-bold  text-[#666666] mb-[10px]"> Newsletter</label>
         <input type="text" id="email" placeholder="Your Email Address Here...." class="px-4 py-2 bg-white mb-[10px]">
         <button
-          class="p-2 bg-[#FF6600] hover:bg-[#DFEFFF] hover:text-[#FF6600] hover:border border-[#FF6600] text-white rounded-lg transition duration-500 ease-in-out">Submit</button>
+          class="p-2 bg-[#FF6600] hover:bg-[#DFEFFF] hover:text-[#FF6600] hover:border border-[#FF6600] text-white rounded-lg transition duration-300 ease-in-out">Submit</button>
       </div>
     </div>
   </section>
-  <div>
-    <h1>gdgdgdg</h1>
-  </div>
   <script src="app.js"></script>
+  <script>
+    // count from 0 to 24
+
+    let count = 0;
+    const counter = document.getElementById("counter");
+
+    function updateCount() {
+      if (count <= 24) {
+        counter.textContent = count;
+        count++;
+        setTimeout(updateCount, 90); // 90ms delay for fast counting
+      }
+    }
+
+    // Start counting on page load
+    updateCount();
+  </script>
 </body>
 
 </html>
